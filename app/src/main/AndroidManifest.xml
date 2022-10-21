@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/studip_launcher"
+        android:roundIcon="@mipmap/studip_launcher_round"
+        android:allowBackup="true"
+        android:supportsRtl="false"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/Theme.StudIpFileMailer">
+        <activity
+            android:name=".util.NoInternetActivity"
+            android:noHistory="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".util.PermissionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Transparent">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:noHistory="true"
+            android:theme="@style/Theme.App.Starting">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".fileSelect.FileActivity"
+            android:exported="false"
+            android:label="@string/title_activity_file_acitvity"
+            android:theme="@style/Theme.StudIpFileMailer" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.StudIpFileMailer" />
+
+        <receiver android:name=".background.FileBroadcastReceiver" />
+    </application>
+
+</manifest>

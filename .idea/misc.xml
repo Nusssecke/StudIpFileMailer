@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../layout/compose-model-1652618650648.xml" value="0.3129222972972973" />
+        <entry key="../../../../../layout/compose-model-1652637794674.xml" value="1.1603053435114503" />
+        <entry key="../../../../../layout/compose-model-1652638636949.xml" value="0.4759259259259259" />
+        <entry key="../../../../../layout/compose-model-1652639750778.xml" value="1.0" />
+        <entry key="../../../../../layout/compose-model-1652641995866.xml" value="0.8602383531960996" />
+        <entry key="../../../../../layout/compose-model-1652643768957.xml" value="0.5546407185628742" />
+        <entry key="../../../../../layout/compose-model-1652853106453.xml" value="0.33" />
+        <entry key="../../../../../layout/compose-model-1653370053518.xml" value="0.3780612244897959" />
+        <entry key="../../../../../layout/compose-model-1653372647026.xml" value="0.3216145833333333" />
+        <entry key="../../../../../layout/compose-model-1653373815914.xml" value="0.25" />
+        <entry key="../../../../../layout/compose-model-1653375228598.xml" value="0.33" />
+        <entry key="../../../../../layout/compose-model-1653419889714.xml" value="0.25" />
+        <entry key="../../../../../layout/compose-model-1653513175027.xml" value="0.38117283950617287" />
+        <entry key="../../../../../layout/compose-model-1659016201914.xml" value="0.33" />
+        <entry key="../../../../../layout/compose-model-1659084976952.xml" value="0.2972222222222222" />
+        <entry key="../../../../../layout/compose-model-1659085301012.xml" value="0.5" />
+        <entry key="../../../../../layout/compose-model-1659087698485.xml" value="0.1" />
+        <entry key="../../../../../layout/compose-model-1659087701237.xml" value="0.1" />
+        <entry key="../../../../../layout/compose-model-1659087732247.xml" value="0.1" />
+        <entry key="../../../../../layout/compose-model-1659087735552.xml" value="0.287962962962963" />
+        <entry key="../../../../../layout/compose-model-1659087766398.xml" value="0.1" />
+        <entry key="../../../../../layout/compose-model-1659089715266.xml" value="0.5" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2605" />
+        <entry key="app/src/main/res/drawable/account.xml" value="0.257" />
+        <entry key="app/src/main/res/drawable/clear.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/download.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/email.xml" value="0.257" />
+        <entry key="app/src/main/res/drawable/file_pdf.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/file_text.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/file_type.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/file_word.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/folder_download.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/folder_full.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/folder_full_menu.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/folder_lock.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/folder_lock_full.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/ic_baseline_sync_24.xml" value="0.309" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.329" />
+        <entry key="app/src/main/res/drawable/password.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/select_courses.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/settings.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/sync.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/vd_vector.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/wifi.xml" value="0.2525" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.35833333333333334" />
+        <entry key="app/src/main/res/layout/activity_select_file.xml" value="0.3532608695652174" />
+        <entry key="app/src/main/res/layout/settings_activity.xml" value="0.2859375" />
+        <entry key="app/src/main/res/xml/root_preferences.xml" value="0.35833333333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

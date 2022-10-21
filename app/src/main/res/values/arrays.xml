@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Download Preference -->
+    <string-array name="download_file_entries">
+        <item>Pdf</item>
+        <item>Txt</item>
+    </string-array>
+
+    <string-array name="download_file_values">
+        <item>application/pdf</item>
+        <item>text/plain</item>
+    </string-array>
+
+    <string-array name="default_file">
+        <item>application/pdf</item>
+    </string-array>
+
+    <!-- Courses MultiList -->
+    <string-array name="course_entries"></string-array>
+    <string-array name="course_values"></string-array>
+    <string-array name="course_default"></string-array>
+</resources>

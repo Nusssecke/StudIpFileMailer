@@ -1,0 +1,116 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/login_header">
+
+        <EditTextPreference
+            android:key="real_name"
+            android:title="@string/logged_in_as"
+            app:selectable="false"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            android:icon="@drawable/clear"
+            android:key="logout"
+            android:title="@string/log_out" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/share_header">
+
+        <EditTextPreference
+            android:icon="@drawable/email"
+            android:selectAllOnFocus="true"
+            app:key="email_address_1"
+            app:title="@string/email_address_1_name"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="email_address_1_sync"
+            android:title="@string/sync_email_address" />
+
+        <EditTextPreference
+            android:icon="@drawable/email"
+            android:selectAllOnFocus="true"
+            app:key="email_address_2"
+            app:title="@string/email_address_2_name"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="email_address_2_sync"
+            android:title="@string/sync_email_address" />
+
+        <EditTextPreference
+            android:icon="@drawable/rm"
+            android:key="login_remarkable"
+            android:title="@string/login_remarkable"
+            android:summary="@string/remarkable_login_summary"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="remarkable_sync"
+            android:title="@string/sync_remarkable" />
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/download_header">
+
+        <MultiSelectListPreference
+            android:icon="@drawable/file_type"
+            app:defaultValue="@array/default_file"
+            app:entries="@array/download_file_entries"
+            app:entryValues="@array/download_file_values"
+            app:key="download_file_types"
+            app:summary="@string/download_file_type_summary"
+            app:title="@string/download_file_types_name" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/sync_background"
+            android:key="background_sync"
+            android:title="@string/sync_files_in_the_background" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/download"
+            android:key="download_local"
+            android:title="@string/download_local_name" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/notifications"
+            android:key="file_notification"
+            android:title="@string/notifications_on_update" />
+
+        <CheckBoxPreference
+            android:icon="@drawable/wifi"
+            app:defaultValue="false"
+            app:key="download_cellular"
+            app:summary=""
+            app:title="@string/download_cellular_name" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/courses_header">
+
+        <MultiSelectListPreference
+            android:icon="@drawable/select_courses"
+            app:defaultValue="@array/course_default"
+            app:entries="@array/course_entries"
+            app:entryValues="@array/course_values"
+            app:key="selected_courses"
+            app:summary="@string/courses_summary"
+            app:title="@string/courses_select_name" />
+
+        <Preference
+            android:icon="@drawable/clear"
+            android:key="clear_courses"
+            android:title="@string/clear_courses" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
