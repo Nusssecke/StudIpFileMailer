@@ -90,18 +90,40 @@ class SettingsActivity : AppCompatActivity() {
             emailPreference1.summaryProvider = summaryProvider
             emailPreference2.summaryProvider = summaryProvider
 
+
             // Remarkable
             val remarkablePreference: EditTextPreference = findPreference("login_remarkable")!!
+
+            // Set summary if logged in to remarkable
+            if (!sharedPreferences.getString("remarkableDeviceToken", "").isNullOrBlank()){
+                remarkablePreference.summary = getString(R.string.remarkable_logged_in)
+            }
+
             remarkablePreference.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, _ ->
+                Toast.makeText(context, getString(R.string.remarkable_connecting), Toast.LENGTH_SHORT).show()
+
+                // TODO Reset summary on new connection attempt, or maybe just set it to connecting...
+
+                // Lock editText while logging in
+                remarkablePreference.isEnabled = false
+
                 this.lifecycleScope.launch(Dispatchers.IO){
+
+
                     val oneTimeCode = remarkablePreference.text
                     val deviceToken = Authentication().registerDevice(oneTimeCode, UUID.randomUUID())
-                    Log.d("SettingsActivty", "remarkable device token is: $deviceToken")
+                    Log.d("SettingsActivity", "remarkable device token is: $deviceToken")
 
-                    if (!deviceToken.isNullOrBlank()){
-                        remarkablePreference.summary = resources.getString(R.string.remarkable_logged_in)
-                    } else {
-                        Toast.makeText(context, getString(R.string.remarkable_code_invalid), Toast.LENGTH_SHORT).show()
+                    lifecycleScope.launch(Dispatchers.Main){
+                        if (!deviceToken.isNullOrBlank()){
+                            remarkablePreference.summary = resources.getString(R.string.remarkable_logged_in)
+                            sharedPreferences.edit().putString("remarkableDeviceToken", deviceToken).commit()
+                            Toast.makeText(context, resources.getString(R.string.remarkable_logged_in), Toast.LENGTH_SHORT).show()
+                        } else {
+                            sharedPreferences.edit().putString("remarkableDeviceToken", "").commit()
+                            Toast.makeText(context, getString(R.string.remarkable_code_invalid), Toast.LENGTH_SHORT).show()
+                        }
+                        remarkablePreference.isEnabled = true
                     }
                 }
                 true

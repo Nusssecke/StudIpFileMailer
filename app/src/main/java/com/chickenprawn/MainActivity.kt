@@ -2,6 +2,7 @@ package com.chickenprawn
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
@@ -11,12 +12,15 @@ import com.chickenprawn.background.FileSyncWorker
 import com.chickenprawn.fileSelect.FileActivity
 import com.chickenprawn.studip.StudIp
 import com.chickenprawn.util.connectionIsWifi
+import es.jlarriba.jrmapi.Authentication
 import es.jlarriba.jrmapi.Jrmapi
+import es.jlarriba.jrmapi.model.Document
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 import java.io.File
 import java.nio.charset.Charset
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -49,8 +53,18 @@ class MainActivity : AppCompatActivity() {
 
     fun testing(view: View){
         val filesDir = this.filesDir
+        val context = this
         MainScope().launch(Dispatchers.IO) {
-            Jrmapi("a", filesDir)
+            val preferences = PreferenceManager.getDefaultSharedPreferences(context)
+            val deviceToken = preferences.getString("remarkableDeviceToken", "")
+            if (!deviceToken.isNullOrBlank()) {
+                val jrmapi = Jrmapi(deviceToken, filesDir)
+                jrmapi.listDocs().forEach {
+                    val document: Document = it as Document
+                    Log.d("StudIpFileMailer", document.vissibleName)
+                }
+            }
+
         }
     }
 

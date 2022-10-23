@@ -38,9 +38,10 @@
     <!-- Remarkable Preference -->
     <string name="sync_remarkable">Sync files to the remarkable cloud</string>
     <string name="login_remarkable">Login to remarkable</string>
-    <string name="remarkable_login_summary">Please generate a one-time code at remarkable.com/#dekstop and paste it here</string>
-    <string name="remarkable_logged_in">Logged in</string>
+    <string name="remarkable_login_summary">Please generate a one-time code at remarkable.com/#mobile and paste it here</string>
+    <string name="remarkable_logged_in">Logged in to reMarkable!</string>
     <string name="remarkable_code_invalid">Code invalid!</string>
+    <string name="remarkable_connecting">Connecting…</string>
 
     <!-- Download Preferences -->
     <string name="download_file_types_name">File types</string>
